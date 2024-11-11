@@ -28,4 +28,5 @@ type Mutation {
     employeeID: ID!
     createEmployeeInput: CreateEmployeeInput!
   ): Employee!
+  deleteEmployee(employeeID: ID!): Boolean
 }

@@ -82,4 +82,10 @@ class EmployeesResolver(
         }
         return employee.get()
     }
+
+    @MutationMapping
+    fun deleteEmployee(@Argument("employeeID") id: String): Boolean {
+        employeeRepo.deleteById(id)
+        return true
+    }
 }
